@@ -7,7 +7,7 @@
   "description": "",
   "main": "./character/character.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "webpack": "webpack --watch"
   },
   "keywords": [],
@@ -19,6 +19,7 @@
     "babel-preset-env": "^1.6.1",
     "jest": "^21.2.1",
     "lodash": "^4.17.4",
+    "phaser-ce": "^2.9.2",
     "webpack": "^3.8.1"
   },
   "devDependencies": {
