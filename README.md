@@ -12,6 +12,7 @@ This RPG Game draws inspiration from all RPG games that I have played during my 
 **Features**
 
 * [Project Information](#project-information)
+* [Features](#features)
 * [Further Implementation](#further-implementation)
 
 ## Project Information
