@@ -1,12 +1,21 @@
-html, body {
-  height: 100%;
+html {
   width: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+  height: 100%;
+  background: black;
+}
+
+body {
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 600px;
+  width: 1150px;
 }
 
 #game {
+  background: url("../assets/battle.gif");
+  background-size: cover;
   height: inherit;
   width: inherit;
 }
