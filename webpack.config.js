@@ -2,25 +2,25 @@ var path = require('path');
 
 module.exports = {
   context: __dirname,
-  entry: "./lib/game.js",
+  entry: "./src/lib/game.js",
   output: {
     path: path.resolve(__dirname),
-    filename: "bundle.js"
+    filename: "./src/bundle.js",
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: [/\.jsx?$/, /\.js?$/],
         exclude: /(node_modules)/,
-        loader: 'babel-loader',
-        query: {
-          presets: ['env']
-        }
-      }
-    ]
+        loader: "babel-loader",
+        options: {
+          presets: ["env"],
+        },
+      },
+    ],
   },
-  devtool: 'source-map',
+  devtool: "source-map",
   resolve: {
-    extensions: [".js", ".jsx", "*"]
-  }
+    extensions: [".js", ".jsx", "*"],
+  },
 };

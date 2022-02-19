@@ -1,29 +1,72 @@
 {
-  "name": "RPG",
+  "name": "rpg",
+  "productName": "rpg",
+  "version": "1.0.0",
+  "description": "My Electron application description",
+  "main": "src/index.js",
   "jest": {
     "verbose": true
   },
-  "version": "1.0.0",
-  "description": "",
-  "main": "./character/character.js",
   "scripts": {
-    "test": "jest",
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\"",
     "webpack": "webpack --watch"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": {
+    "name": "David Chen",
+    "email": "qydchen@gmail.com"
+  },
+  "license": "MIT",
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "rpg"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  },
   "dependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-env": "^1.6.1",
+    "electron-squirrel-startup": "^1.0.0",
     "jest": "^21.2.1",
-    "lodash": "^4.17.4",
-    "webpack": "^3.8.1"
+    "lodash": "^4.17.4"
   },
   "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@electron-forge/cli": "^6.0.0-beta.63",
+    "@electron-forge/maker-deb": "^6.0.0-beta.63",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.63",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.63",
+    "@electron-forge/maker-zip": "^6.0.0-beta.63",
     "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
     "babel-jest": "^21.2.0",
-    "babel-preset-env": "^1.6.1"
+    "babel-loader": "^8.2.3",
+    "babel-preset-env": "^1.6.1",
+    "electron": "17.0.1",
+    "webpack": "^5.69.1",
+    "webpack-cli": "^4.9.2"
   }
 }
