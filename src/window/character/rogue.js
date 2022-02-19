@@ -13,7 +13,7 @@ class Rogue extends PlayerCharacter {
     this.talents = Talent.rogue;
 
     this.stats.combo = 0;
-    
+
     this.spawnMessage(this.role);
     this.equipInitItems(...initRogueInv);
   }

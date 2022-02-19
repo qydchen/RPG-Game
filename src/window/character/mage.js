@@ -13,7 +13,7 @@ class Mage extends PlayerCharacter {
     this.talents = Talent.mage;
 
     this.stats.power = 0;
-    
+
     this.spawnMessage(this.role);
     this.equipInitItems(...initMageInv);
   }

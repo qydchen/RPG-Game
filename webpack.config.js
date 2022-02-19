@@ -2,10 +2,10 @@ var path = require('path');
 
 module.exports = {
   context: __dirname,
-  entry: "./src/lib/game.js",
+  entry: "./src/window/game.js",
   output: {
-    path: path.resolve(__dirname),
-    filename: "./src/bundle.js",
+    path: path.join(path.resolve(__dirname), "src", "window"),
+    filename: "bundle.js",
   },
   module: {
     rules: [
@@ -14,7 +14,7 @@ module.exports = {
         exclude: /(node_modules)/,
         loader: "babel-loader",
         options: {
-          presets: ["env"],
+          presets: ["@babel/preset-env"],
         },
       },
     ],

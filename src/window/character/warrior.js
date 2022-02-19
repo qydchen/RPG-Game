@@ -13,7 +13,7 @@ class Warrior extends PlayerCharacter {
     this.talents = Talent.warrior;
 
     this.stats.rage = 0;
-    
+
     this.spawnMessage(this.role);
     this.equipInitItems(...initWarriorInv);
   }
