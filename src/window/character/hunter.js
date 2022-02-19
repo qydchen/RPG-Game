@@ -20,14 +20,17 @@ class Hunter extends PlayerCharacter {
   }
 
   spawn() {
-    this.initSprite({
-      width: 30,
-      height: 30,
-      sx: 140,
-      sy: 90,
-      dx: 50,
-      dy: 118,
-    }, "../assets/hunter.png")
+    this.initSprite(
+      {
+        width: 30,
+        height: 30,
+        sx: 140,
+        sy: 90,
+        dx: 50,
+        dy: 118,
+      },
+      "./assets/hunter.png"
+    );
   }
 
   generatePower(focusGen) {

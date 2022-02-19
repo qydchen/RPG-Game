@@ -19,14 +19,17 @@ class Mage extends PlayerCharacter {
   }
 
   spawn() {
-    this.initSprite({
-      width: 30,
-      height: 35,
-      sx: 5,
-      sy: 5,
-      dx: 20,
-      dy: 114,
-    }, "../assets/mage.png")
+    this.initSprite(
+      {
+        width: 30,
+        height: 35,
+        sx: 5,
+        sy: 5,
+        dx: 20,
+        dy: 114,
+      },
+      "./assets/mage.png"
+    );
   }
 
   generatePower(powerGen) {

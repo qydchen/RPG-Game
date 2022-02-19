@@ -19,14 +19,17 @@ class Rogue extends PlayerCharacter {
   }
 
   spawn() {
-    this.initSprite({
-      width: 30,
-      height: 28,
-      sx: 5,
-      sy: 0,
-      dx: 140,
-      dy: 120,
-    }, "../assets/rogue.png")
+    this.initSprite(
+      {
+        width: 30,
+        height: 28,
+        sx: 5,
+        sy: 0,
+        dx: 140,
+        dy: 120,
+      },
+      "./assets/rogue.png"
+    );
   }
 
   generatePower(comboGen) {

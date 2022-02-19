@@ -19,14 +19,17 @@ class Cleric extends PlayerCharacter {
   }
 
   spawn() {
-    this.initSprite({
-      width: 30,
-      height: 40,
-      sx: 15,
-      sy: 65,
-      dx: 110,
-      dy: 108,
-    }, "../assets/cleric.png")
+    this.initSprite(
+      {
+        width: 30,
+        height: 40,
+        sx: 15,
+        sy: 65,
+        dx: 110,
+        dy: 108,
+      },
+      "./assets/cleric.png"
+    );
   }
 
   generatePower(powerGen) {
@@ -40,15 +43,13 @@ class Cleric extends PlayerCharacter {
     if (this.hasPower(powerCost)) {
       this.stats.power -= powerCost;
     } else {
-      throw 'Not enough Holy Power';
+      throw "Not enough Holy Power";
     }
   }
 
   hasPower(powerCost = 0) {
     return this.stats.power >= powerCost;
   }
-
-
 }
 
 export default Cleric;

@@ -19,14 +19,17 @@ class Warrior extends PlayerCharacter {
   }
 
   spawn() {
-    this.initSprite({
-      width: 30,
-      height: 40,
-      sx: 5,
-      sy: 5,
-      dx: 80,
-      dy: 109,
-    }, "../assets/warrior.png")
+    this.initSprite(
+      {
+        width: 30,
+        height: 40,
+        sx: 5,
+        sy: 5,
+        dx: 80,
+        dy: 109,
+      },
+      "./assets/warrior.png"
+    );
   }
 
   generatePower(rageGen) {
